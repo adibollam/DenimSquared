@@ -1,12 +1,11 @@
 from pymongo import MongoClient
-import gridfs
-
-
+from flask import Flask
+from bson.json_util import dumps
+app = Flask(__name__)
 
 client = MongoClient()
 db = client.calhacks
 
-fs = gridfs.GridFS(db)
 
 
 #data for shirts
@@ -49,10 +48,13 @@ print('Two shirt: {0}'.format(resultTwo.inserted_id))
 print('Three shirt: {0}'.format(resultThree.inserted_id))
 print('Four shirt: {0}'.format(resultFour.inserted_id))
 
+#Flask code that transfers the mongo.db data to the Javascript front end
+@app.route('/shirts')
+def shirts():
+      return dumps(db.shirts.find())
+
 
 #data for pants
-
-
 pants = db.pants
 pantOne = { "color" : "blue",
              "fabric" : "cotton",
@@ -73,7 +75,7 @@ pantThree = { "color" : "pink",
              "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg" } 
 
 pantFour = { "color" : "blue",
-             "fabric" : "jeans",
+             "fabric" : "denim",
              "occasions" : "casual",
              "style" : "jeans",
              "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
@@ -92,10 +94,13 @@ print('Three pant: {0}'.format(resultThree.inserted_id))
 print('Four pant: {0}'.format(resultFour.inserted_id))
 
 
+#Flask code that transfers the mongo.db data to the Javascript front end
+@app.route('/pants')
+def pants():
+      return dumps(db.pants.find())
+
 
 #Code for jacket
-
-
 jacket = db.jacket
 pantOne = { "color" : "grey",
              "fabric" : "cotton",
@@ -128,39 +133,42 @@ resultTwo = jacket.insert_one(shirtTwo)
 resultThree = jacket.insert_one(shirtThree) 
 resultFour = jacket.insert_one(shirtFour)
 
-
 #test case used to test the code compiliation
 print('One jacket: {0}'.format(resultOne.inserted_id))
 print('Two jacket: {0}'.format(resultTwo.inserted_id))
 print('Three jacket: {0}'.format(resultThree.inserted_id))
 print('Four jacket: {0}'.format(resultFour.inserted_id))
 
+#Flask code that transfers the mongo.db data to the Javascript front end
+@app.route('/jackets')
+def jackets():
+      return dumps(db.jackets.find())
 
 #Code for shoes
 shoes = db.shoes
 shoeOne = { "color" : "grey",
              "fabric" : "cotton",
-             "occasions" : "tennis",
-             "style" :  "shoes",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg" } 
+             "occasions" : "sport",
+             "style" :  "tennis",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/nikeRoshe.jpg" } 
 
 shoeTwo = { "color" : "brown",
-             "fabric" : "cotton",
-             "occasions" : "flats",
-             "style" : "pants",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg"} 
+             "fabric" : "leather",
+             "occasions" : "business",
+             "style" : "fashion",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/sperryBoats.jpg"} 
                          
-shoeThree = { "color" : "pink",
+shoeThree = { "color" : "white",
              "fabric" : "cotton",
              "occasions" : "casual",
-             "style" : "shorts",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg" } 
+             "style" : "skate",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/whiteVans.jpg" } 
 
-shoeFour = { "color" : "blue",
-             "fabric" : "jeans",
+shoeFour = { "color" : "black",
+             "fabric" : "polyster",
              "occasions" : "casual",
-             "style" : "pants",
-             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
+             "style" : "flat",
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/nikeSlides.jpg" }
 
 
 #code used to put the documents for shoes into the shoe collection
@@ -169,10 +177,15 @@ resultTwo = shoes.insert_one(shoeTwo)
 resultThree = shoes.insert_one(shoeThree) 
 resultFour = shoes.insert_one(shoeFour)
 
-
+#Test cases that ensure the 
 print('One shoes: {0}'.format(resultOne.inserted_id))
 print('Two shoes: {0}'.format(resultTwo.inserted_id))
 print('Three shoes: {0}'.format(resultThree.inserted_id))
 print('Four shoes: {0}'.format(resultFour.inserted_id))
+
+#Flask code that transfers the mongo.db data to the Javascript front end
+@app.route('/shoes')
+def shoes():
+      return dumps(db.shoes.find())
 
 
