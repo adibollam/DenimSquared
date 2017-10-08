@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+u<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -47,7 +47,8 @@
           <p><h1 class="mt-5">Input Link To Clothing</h1><p>
           <form>
           WebLink:<br>
-          <input type="text" name="weblink" onkeypress="handle(event)"><br>
+          <input id="weblink" type="text" value=""><br>
+          <input type="button" id="buttonID" value="submit"/>
         </form>
           </ul>
         </div>
@@ -58,13 +59,13 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javaScript" src="scrape.js"></script>
     <script>
-    function handle(e){
-        if(e.keyCode === 13){
-            e.preventDefault(); // Ensure it is only this code that runs
-            window.location='/Users/Ray/IdeaProjects/Wardrobe/Info/Info.html'
-        }
-    }
+
+    $('#buttonID').click(function(){
+    window.location='/Users/Ray/IdeaProjects/Info.html'; //value of your default option
+    });
+
     </script>
 
   </body>

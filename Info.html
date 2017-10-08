@@ -15,6 +15,26 @@
 
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
+    <style>
+
+    #Head-2{
+    	color: blue;
+      text-align:center;
+    }
+    #info-head{
+      text-align: center;
+    }
+    #about{
+      text-align: center;
+    }
+    #toPageThree{
+      text-align: center;
+    }
+
+
+
+    </style>
+
 
   </head>
 
@@ -50,31 +70,72 @@
       </div>
     </header>
 
+
+
     <section id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Information</h2>
-            <p class="lead">Our search result returned the following features about your item of clothing. Some items may
-            have not been properly displayed</p>
-            <h4><b>Occasion</b></h4>
-            <p>_____________<p>
+            <h2 id="info-head">Information</h2>
+            <p id="Head-2" class="lead">Please enter the information of your new article of clothing if the scraper did not assign attributes correctly. Then click "Show Me Outfits!".</p>
+            <input type="button" id="toPageThree" value="Show Me Outfits!"/>
+            <hr>
+
+            <h4><b>Clothing Type</b></h4>
+            <div>
+              <select id="type" name="type">
+                <option value = 0>All</option>
+                <option value = 1>shirt</option>
+                <option value = 2>pants</option>
+                <option value = 3>jackets</option>
+                <option value = 4>shoes</option>
+              </select>
+            </div>
             <h4><b>Style</b></h4>
-            <p>_____________<p>
+            <div>
+              <select id="style" name="style">  </select>
+            </div>
+            <h4><b>Occasion</b></h4>
+            <div>
+              <select id="occasion" name="occasion">
+                <option value="casual">casual</option>
+                <option value="business">business</option>
+                <option value="summer">summer</option>
+                <option value="winter">winter</option>
+                <option value="sport">sport</option>
+              </select>
+            </div>
             <h4><b>Color</b></h4>
-            <p>_____________<p>
+            <div>
+              <select id="color" name="color">
+                <option value="black">black</option>
+                <option value="white">white</option>
+                <option value="grey">grey</option>
+                <option value="red">red</option>
+                <option value="orange">orange</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="violet">violet</option>
+                <option value="brown">brown</option>
+                <option value="pink">pink</option>
+              </select>
+            </div>
             <h4><b>Fabric</b></h4>
-            <p>_____________<p>
-<!--             <ul>
-              <li>Occassion</li>
-              <li>Style</li>
-              <li>Color</li>
-              <li>Fabric</li>
-            </ul> -->
+            <div>
+              <select id="fabric" name="fabric">
+                <option value="cotton">cotton</option>
+                <option value="denim">denim</option>
+                <option value="leather">leather</option>
+                <option value="nylon">nylon</option>
+                <option value="polyester">polyester</option>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
+
 
     <section id="services" class="bg-light">
       <div class="container">
@@ -93,7 +154,7 @@
           <div class="col-lg-8 mx-auto">
             <h2>Search Again</h2>
             <p class="lead">Not the item you were looking for? Click
-            <a href="/Users/Ray/IdeaProjects/Wardrobe/index.html">here</a>
+            <a href="/Users/Ray/IdeaProjects/index.html">here</a>
             to return back to the main page</p>
           </div>
         </div>
@@ -118,6 +179,16 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
+    <script type="text/javaScript" src="info-part.js"></script>
+    <script type="text/javaScript" src="scrape.js"></script>
+    <script>
+
+    $('#toPageThree').click(function(){
+    window.location='/Users/Ray/IdeaProjects/Results/results.html'; //value of your default option
+    });
+
+    </script>
+
 
   </body>
 

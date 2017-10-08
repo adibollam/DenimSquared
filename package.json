@@ -1,8 +1,8 @@
 {
-  "title": "Bare",
-  "name": "startbootstrap-bare",
+  "title": "Scrolling Nav",
+  "name": "startbootstrap-scrolling-nav",
   "version": "4.0.0-beta",
-  "description": "A basic HTML starter template for Bootstrap",
+  "description": "A smooth scrolling navigation HTML template built with Bootstrap",
   "keywords": [
     "css",
     "sass",
@@ -11,9 +11,9 @@
     "theme",
     "template"
   ],
-  "homepage": "https://startbootstrap.com/template-overviews/bare",
+  "homepage": "https://startbootstrap.com/template-overviews/scrolling-nav",
   "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-bare/issues",
+    "url": "https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/issues",
     "email": "feedback@startbootstrap.com"
   },
   "license": "MIT",
@@ -23,15 +23,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-bare.git"
+    "url": "https://github.com/BlackrockDigital/startbootstrap-scrolling-nav.git"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
-    "express": "^4.16.1",
     "jquery": "^3.2.1",
-    "node-fetch": "^1.7.3",
-    "popper.js": "^1.11.1",
-    "request": "^2.83.0"
+    "jquery.easing": "^1.4.1",
+    "popper.js": "^1.11.1"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
