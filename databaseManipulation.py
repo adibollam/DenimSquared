@@ -8,66 +8,84 @@ db = client.calhacks
 
 fs = gridfs.GridFS(db)
 
+
+#data for shirts
+
 shirts = db.shirts
-shirtOne = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+shirtOne = { "color" : "blue",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" :  "fullsleeve",
+             "imageuri" : "https://github.com/shloak/denimsquared/blob/master/images/bluevv.jpg" } 
 
-shirtTwo = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+shirtTwo = { "color" : "white",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "fullsleeve",
+             "imageuri" : "https://github.com/shloak/denimsquared/blob/master/images/vineyardvines.jpg"} 
                          
-shirtThree = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+shirtThree = { "color" : "pink",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "t-shirt",
+             "imageuri" : "https://github.com/shloak/denimsquared/blob/master/images/vineyardvinestshirt.jpg" } 
 
-shirtFour = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+shirtFour = { "color" : "black",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "button",
+             "iamgeuri" : "https://github.com/shloak/denimsquared/blob/master/images/vvpolo.jpg" }
 
+
+#submitting the documents to the collection
 resultOne = shirts.insert_one(shirtOne)
 resultTwo = shirts.insert_one(shirtTwo)
 resultThree = shirts.insert_one(shirtThree) 
 resultFour = shirts.insert_one(shirtFour)
+
+#test case to confirm working code
 print('One shirt: {0}'.format(resultOne.inserted_id))
 print('Two shirt: {0}'.format(resultTwo.inserted_id))
 print('Three shirt: {0}'.format(resultThree.inserted_id))
 print('Four shirt: {0}'.format(resultFour.inserted_id))
 
 
-#Code for pants
+#data for pants
 
 
 pants = db.pants
-pantsOne = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             "Occasions" : "Casual",
-             "imageURI" : "localhost:8000/images/image.jpg" } 
+pantOne = { "color" : "blue",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" :  "shorts",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg" } 
 
-pantsTwo = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+pantTwo = { "color" : "brown",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "khakis",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg"} 
                          
-pantsThree = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+pantThree = { "color" : "pink",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "shorts",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg" } 
 
-pantsFour = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+pantFour = { "color" : "blue",
+             "fabric" : "jeans",
+             "occasions" : "casual",
+             "style" : "jeans",
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
 
-resultOne = pants.insert_one(shirtOne)
-resultTwo = pants.insert_one(shirtTwo)
-resultThree = pants.insert_one(shirtThree) 
-resultFour = pants.insert_one(shirtFour)
+
+#putting the pants data documents in the collection
+resultOne = pants.insert_one(pantOne)
+resultTwo = pants.insert_one(pantTwo)
+resultThree = pants.insert_one(pantThree) 
+resultFour = pants.insert_one(pantFour)
+
+#test case to check for code compilation
 print('One pant: {0}'.format(resultOne.inserted_id))
 print('Two pant: {0}'.format(resultTwo.inserted_id))
 print('Three pant: {0}'.format(resultThree.inserted_id))
@@ -113,25 +131,30 @@ print('Four jacket: {0}'.format(resultFour.inserted_id))
 
 
 shoes = db.shoes
-shoesOne = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+pantOne = { "color" : "grey",
+             "fabric" : "cotton",
+             "occasions" : "tennis",
+             "style" :  "shoes",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg" } 
 
-shoesTwo = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+pantTwo = { "color" : "brown",
+             "fabric" : "cotton",
+             "occasions" : "flats",
+             "style" : "pants",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg"} 
                          
-shoesThree = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+pantThree = { "color" : "pink",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "shorts",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg" } 
 
-shoesFour = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+pantFour = { "color" : "blue",
+             "fabric" : "jeans",
+             "occasions" : "casual",
+             "style" : "pants",
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
+
 
 resultOne = shoes.insert_one(shirtOne)
 resultTwo = shoes.insert_one(shirtTwo)
