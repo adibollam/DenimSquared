@@ -1,2 +1,2 @@
-Fashion advice from people who have no fashion sense
-
+# DenimSquared
+Fashion advice from people with no fashion sense

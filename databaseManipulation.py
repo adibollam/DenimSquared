@@ -102,36 +102,36 @@ def pants():
 
 #Code for jacket
 jacket = db.jacket
-pantOne = { "color" : "grey",
-             "fabric" : "cotton",
-             "occasions" : "tennis",
-             "style" :  "shoes",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg?raw=true" } 
+jacketOne = { "color" : "green",
+             "fabric" : "leather",
+             "occasions" : "casual",
+             "style" :  "windbreaker",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/bomberjacket.jpg?raw=true" } 
 
-pantTwo = { "color" : "brown",
+jacketTwo = { "color" : "grey",
              "fabric" : "cotton",
-             "occasions" : "flats",
-             "style" : "pants",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg?raw=true"} 
+             "occasions" : "casual",
+             "style" : "flannel",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/flannel.jpg"} 
                          
-pantThree = { "color" : "pink",
+jacketThree = { "color" : "blue",
              "fabric" : "cotton",
              "occasions" : "casual",
-             "style" : "shorts",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg?raw=true" } 
+             "style" : "hoodie",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/bluehoodie.jpg?raw=true" } 
 
-pantFour = { "color" : "blue",
-             "fabric" : "jeans",
-             "occasions" : "casual",
-             "style" : "pants",
-             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg?raw=true" }
+jacketFour = { "color" : "blue",
+             "fabric" : "polyster",
+             "occasions" : "athletic",
+             "style" : "athletic",
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/athleticJacket.jpg?raw=true" }
 
 #code that puts the jacket documents into the jacket collection
 
-resultOne = jacket.insert_one(shirtOne)
-resultTwo = jacket.insert_one(shirtTwo)
-resultThree = jacket.insert_one(shirtThree) 
-resultFour = jacket.insert_one(shirtFour)
+resultOne = jacket.insert_one(jacketOne)
+resultTwo = jacket.insert_one(jacketTwo)
+resultThree = jacket.insert_one(jacketThree) 
+resultFour = jacket.insert_one(jacketFour)
 
 #test case used to test the code compiliation
 print('One jacket: {0}'.format(resultOne.inserted_id))

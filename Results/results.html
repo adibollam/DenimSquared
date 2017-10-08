@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Results</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Wardrobe Helper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#results">Results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#edit">Edit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    </div>
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Here are your matches</h1>
+      </div>
+    </header>
+    <br></br>
+    <div class="container">
+      <h3> Toggle which items of clothing you want to display</h3>
+    </div>
+      <div class="container">
+        <br></br>
+          <button id = "toggleShirt" type="button" class="btn btn-primary">Shirts</button>
+          <button id = "toggleJacket" type="button" class="btn btn-primary">Jackets</button>
+          <button id = "togglePants" type="button" class="btn btn-primary">Pants</button>
+          <button id = "toggleShoes" type ="button" class="btn btn-primary">Shoes</button>
+        </div>
+
+    <section id="results">
+    <div class="container">
+<!--       width: <input type="text" class="form-control" id="inputWidth" placeholder="32" value="4" /><br />
+      height: <input type="text" class="form-control" id="inputHeight" placeholder="32" value="1" /><br />
+      <button type="button" class="btn btn-primary" id="resizeChart">Go!</button> <br /> -->
+      <div id="grid-source"><table id='table'>
+          <tr>
+            <td><h2>Shirts</h2></td>
+            <td><h2>Jackets</h2></td>
+            <td><h2>Pants</h2></td>
+            <td><h2>Shoes</h2></td>
+          <tr>
+              <td><img src="https://raw.githubusercontent.com/shloak/DenimSquared/master/Images/blueVV.jpg" alt="shirt1" style="width:260px;height:260px;"></td>
+              <td><img src="pic_mountain.jpg" alt="Mountain View" style="width:260px;height:260px;"></td>
+              <td><img src="https://github.com/shloak/DenimSquared/blob/master/Images/pinkshortsw:oman.jpg?raw=true" alt="short1" style="width:260px;height:260px;"></td>
+              <td><img src="https://github.com/shloak/DenimSquared/blob/master/Images/sperryBoats.jpg?raw=true" alt="shoe1" style="width:260px;height:260px;"></td>
+          </tr>
+              <td><img src="https://github.com/shloak/DenimSquared/blob/master/Images/vineyardVinesTshirt.jpg?raw=true" alt="shirt2" style="width:260px;height:260px;"></td>
+              <td><img src="pic_mountain.jpg" alt="Mountain View" style="width:260px;height:260px;"></td>
+              <td><img src="https://github.com/shloak/DenimSquared/blob/master/Images/shortsw:oman.jpg?raw=true" alt="short2" style="width:260px;height:260px;"></td>
+              <td><img src="https://github.com/shloak/DenimSquared/blob/master/Images/whiteVans.jpg?raw=true" alt="shoe2" style="width:260px;height:260px;"></td>
+
+          </table></div>
+    </div>
+    </section>
+
+    <section id="edit" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Edit your search</h2>
+            <p class="lead">Is the wrong item displayed? Click
+            <a href="/Users/Ray/IdeaProjects/Info.html">here</a>
+            to return back to your searched item</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="search" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Search Again</h2>
+            <p class="lead">Not the item you were looking for? Click
+            <a href="/Users/Ray/IdeaProjects/index.html">here</a>
+            to return back to the main page</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Zergenkuff Productions 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery/table.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#toggleShirt').click(function() {
+              $('td:nth-child(1)').toggle();
+          });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#toggleJacket').click(function() {
+              $('td:nth-child(2)').toggle();
+          });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#togglePants').click(function() {
+              $('td:nth-child(3)').toggle();
+          });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#toggleShoes').click(function() {
+              $('td:nth-child(4)').toggle();
+          });
+      });
+    </script>
+
+  </body>
+
+</html>
