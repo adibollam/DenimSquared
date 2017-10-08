@@ -38,7 +38,9 @@ function readMongo() {
 
   fetch('http://localhost:5000/shirts', myInit).then(function(response) {
     //console.log(response.body);
-    console.log(request)
+    return response.json();
+  }).then(function(text) {
+    console.log(text);
   });
 }
 
