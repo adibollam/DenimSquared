@@ -15,25 +15,25 @@ shirtOne = { "color" : "blue",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" :  "fullsleeve",
-             "imageuri" : "https://github.com/shloak/denimsquared/blob/master/images/bluevv.jpg" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/blueVV.jpg?raw=true" } 
 
 shirtTwo = { "color" : "white",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "fullsleeve",
-             "imageuri" : "https://github.com/shloak/denimsquared/blob/master/images/vineyardvines.jpg"} 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vineyardVines.jpg?raw=true"} 
                          
 shirtThree = { "color" : "pink",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "t-shirt",
-             "imageuri" : "https://github.com/shloak/denimsquared/blob/master/images/vineyardvinestshirt.jpg" } 
+             "imageuri" : "https://github.com/shloak/denimsquared/blob/master/images/vineyardvinestshirt.jpg?raw=true" } 
 
 shirtFour = { "color" : "black",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "button",
-             "iamgeuri" : "https://github.com/shloak/denimsquared/blob/master/images/vvpolo.jpg" }
+             "iamgeuri" : "https://github.com/shloak/denimsquared/blob/master/images/vvpolo.jpg?raw=true" }
 
 
 #submitting the documents to the collection
@@ -60,25 +60,25 @@ pantOne = { "color" : "blue",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" :  "shorts",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg?raw=true" } 
 
-pantTwo = { "color" : "brown",
+pantTwo = { "color" : "white",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "khakis",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg"} 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg?raw=true"} 
                          
 pantThree = { "color" : "pink",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "shorts",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg?raw=true" } 
 
 pantFour = { "color" : "blue",
              "fabric" : "denim",
              "occasions" : "casual",
              "style" : "jeans",
-             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg?raw=true" }
 
 
 #putting the pants data documents in the collection
@@ -106,25 +106,25 @@ pantOne = { "color" : "grey",
              "fabric" : "cotton",
              "occasions" : "tennis",
              "style" :  "shoes",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg?raw=true" } 
 
 pantTwo = { "color" : "brown",
              "fabric" : "cotton",
              "occasions" : "flats",
              "style" : "pants",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg"} 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg?raw=true"} 
                          
 pantThree = { "color" : "pink",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "shorts",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg?raw=true" } 
 
 pantFour = { "color" : "blue",
              "fabric" : "jeans",
              "occasions" : "casual",
              "style" : "pants",
-             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg?raw=true" }
 
 #code that puts the jacket documents into the jacket collection
 
@@ -150,25 +150,25 @@ shoeOne = { "color" : "grey",
              "fabric" : "cotton",
              "occasions" : "sport",
              "style" :  "tennis",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/nikeRoshe.jpg" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/nikeRoshe.jpg?raw=true" } 
 
 shoeTwo = { "color" : "brown",
              "fabric" : "leather",
              "occasions" : "business",
              "style" : "fashion",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/sperryBoats.jpg"} 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/sperryBoats.jpg?raw=true"} 
                          
 shoeThree = { "color" : "white",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "skate",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/whiteVans.jpg" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/whiteVans.jpg?raw=true" } 
 
 shoeFour = { "color" : "black",
              "fabric" : "polyster",
              "occasions" : "casual",
              "style" : "flat",
-             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/nikeSlides.jpg" }
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/nikeSlides.jpg?raw=true" }
 
 
 #code used to put the documents for shoes into the shoe collection
