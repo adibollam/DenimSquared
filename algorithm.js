@@ -16,17 +16,9 @@ var input = {"type": 'shirt',
             "fabrics": 'cotton'};
 
 var shirtInput = true;
-var inputAsList = goodShirts();
+//var inputAsList = goodShirts();
 
-var matches = allMatches();
-
-if (len(matches) == 4) {
-  cp = Combinatorics.cartesianProduct(matches[0], matches[1], matches[2], matches[3]);
-  cp = cp.toArray();
-}
-else {
-
-}
+//var matches = allMatches();
 
 
 readMongo();
@@ -105,10 +97,10 @@ function styleChecker(shirt, other) {
 
 function fabricChecker(shirt, other) {
   var dict = { 'cotton': ['leather'],
-  'denim':[ 'leather', 'denim', 'nylon', 'polyster'],
-  'leather': [ 'leather', 'denim', 'nylon', 'polyster'],
-  'nylon': ['denim', 'leather'],
-  'polyster': ['denim', 'leather']};
+  'denim':['cotton', 'leather', 'denim', 'nylon', 'polyster'],
+  'leather': ['cotton', 'leather', 'denim', 'nylon', 'polyster'],
+  'nylon': ['cotton', 'denim', 'leather'],
+  'polyster': ['cotton', 'denim', 'leather']};
   return dict[shirt['fabrics']].indexOf(other["fabrics"]) == -1;
 
 }
