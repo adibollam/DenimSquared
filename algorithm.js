@@ -1,9 +1,9 @@
 var types = ["shirt", "jacket", "pants", "shoes"];
 var occassions = ["casual", "business", "summer", "winter", "sport"];
 var colors = ["black", "white", "grey", "gray", "red", "orange", "yellow", "green", "blue", "violet", "pink", "purple", "brown"];
-var styles = [["button", "v-neck", "fullsleeve", "t-shirt"], 
-        ["flannel", "windbreaker", "sports", "hoodie"], 
-        ["jeans", "slacks", "shorts", "khaki", "sweatpant"], 
+var styles = [["button", "v-neck", "fullsleeve", "t-shirt"],
+        ["flannel", "windbreaker", "sports", "hoodie"],
+        ["jeans", "slacks", "shorts", "khaki", "sweatpant"],
         ["tennis", "flat", "skate", "fashion"]];
 var fabrics = ["cotton", "denim", "leather", "nylon", "polyster"];
 
@@ -65,7 +65,14 @@ function occasionChecker(shirt, other) {
 }
 
 function colorChecker(shirt, other) {
-  return true;
+  var index = 1 ? (["black", "white", "grey", "gray"].indexOf(shirt["color"]) != -1) :
+  (2 ? ["yellow", "brown"].indexOf(shirt["color"]) : 3);
+
+  var dict = {1: [],
+  2: ["red", "orange", "green", "blue", "violet", "pink", "purple"],
+  3: ["red", "orange", "green", "blue", "violet", "pink", "purple"]};
+
+  return dict[index].indexOf(other['colors']) == -1;
 }
 
 function styleChecker(shirt, other) {
@@ -78,6 +85,11 @@ function styleChecker(shirt, other) {
 }
 
 function fabricChecker(shirt, other) {
-  return true;
-}
+  var dict = { 'cotton': ['leather'],
+  'denim':['cotton', 'leather', 'denim', 'nylon', 'polyster'],
+  'leather': ['cotton', 'leather', 'denim', 'nylon', 'polyster'],
+  'nylon': ['cotton', 'denim', 'leather'],
+  'polyster': ['cotton', 'denim', 'leather']};
+  return dict[shirt['fabrics']].indexOf(other["fabrics"]) == -1;
 
+}
