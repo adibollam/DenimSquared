@@ -22,8 +22,20 @@ var shoes = blob["shoes"];
 var wardrobe = [shirts, jackets, pants, shoes];
 
 var shirtInput = true;
-var inputAsList = goodShirts();
-var matches = allMatches();
+//var inputAsList = goodShirts();
+//var matches = allMatches();
+
+readMongo();
+
+function readMongo() {
+  var myHeaders = new Headers();
+
+  var myInit = { method: 'GET', headers: myHeaders, };
+
+  fetch('http://localhost:8000/shirts', myInit).then(function(response) {
+    console.log(response.body);
+  });
+}
 
 function goodShirts() {
   if (input["type"] === "shirt") return [input];

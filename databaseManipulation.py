@@ -60,19 +60,19 @@ pantOne = { "color" : "blue",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" :  "shorts",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg?raw=true" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/shortsw:oman.jpg?raw=true" } 
 
 pantTwo = { "color" : "white",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "khakis",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg?raw=true"} 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/whiteKhakis.jpg?raw=true"} 
                          
 pantThree = { "color" : "pink",
              "fabric" : "cotton",
              "occasions" : "casual",
              "style" : "shorts",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg?raw=true" } 
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/pinkshortsw:oman.jpg?raw=true" } 
 
 pantFour = { "color" : "blue",
              "fabric" : "denim",
