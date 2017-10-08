@@ -102,28 +102,28 @@ def pants():
 
 #Code for jacket
 jacket = db.jacket
-pantOne = { "color" : "grey",
-             "fabric" : "cotton",
-             "occasions" : "tennis",
-             "style" :  "shoes",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg?raw=true" } 
+pantOne = { "color" : "green",
+             "fabric" : "leather",
+             "occasions" : "casual",
+             "style" :  "windbreaker",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/bomberjacket.jpg?raw=true" } 
 
-pantTwo = { "color" : "brown",
-             "fabric" : "cotton",
-             "occasions" : "flats",
-             "style" : "pants",
-             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg?raw=true"} 
-                         
-pantThree = { "color" : "pink",
+pantTwo = { "color" : "grey",
              "fabric" : "cotton",
              "occasions" : "casual",
-             "style" : "shorts",
+             "style" : "flannel",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/flannel.jpg"} 
+                         
+pantThree = { "color" : "blue",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "hoodie",
              "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg?raw=true" } 
 
 pantFour = { "color" : "blue",
-             "fabric" : "jeans",
-             "occasions" : "casual",
-             "style" : "pants",
+             "fabric" : "polyster",
+             "occasions" : "athletic",
+             "style" : "athletic",
              "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg?raw=true" }
 
 #code that puts the jacket documents into the jacket collection
