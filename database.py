@@ -49,7 +49,7 @@ print('Three shirt: {0}'.format(resultThree.inserted_id))
 print('Four shirt: {0}'.format(resultFour.inserted_id))
 
 #Flask code that transfers the mongo.db data to the Javascript front end
-@app.route('/shirtsnew')
+@app.route('/shirts')
 def shirts():
       return dumps(db.shirts.find())
 
@@ -142,7 +142,7 @@ print('Four jacket: {0}'.format(resultFour.inserted_id))
 #Flask code that transfers the mongo.db data to the Javascript front end
 @app.route('/jackets')
 def jackets():
-      return dumps(db.jackets.find())
+      return dumps(db.jacket.find())
 
 #Code for shoes
 shoes = db.shoes

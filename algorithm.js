@@ -10,39 +10,108 @@ var styles = [["button", "v-neck", "fullsleeve", "t-shirt"],
         ["tennis", "flat", "skate", "fashion"]];
 var fabrics = ["cotton", "denim", "leather", "nylon", "polyster"];
 var input = {"type": 'shirt',
-            "occassion": 'casual',
+            "occassions": 'casual',
             "color": 'black',
             "style": 't-shirt',
-            "fabrics": 'cotton'};
+            "fabric": 'cotton'};
 
 var shirtInput = true;
-//var inputAsList = goodShirts();
 
-//var matches = allMatches();
+var shirts = [];
+var jackets = [];
+var shoes = [];
+var pants = [];
 
+var wardrobe = [];
 
-readMongo();
+mongoShirts();
 
-function readMongo() {
+/*mongoPants();
+mongoShoes();
+mongoJackets();*/
+
+var wardrobe = [];
+
+/*var inputAsList = goodShirts();
+var matches = allMatches();*/
+
+//readMongo('pants');
+
+function mongoShirts() {
   var myHeaders = new fetch.Headers();
 
   var myInit = { method: 'GET', headers: myHeaders, };
 
-  fetch('http://localhost:5000/shirts', myInit).then(function(response) {
+  fetch('http://localhost:5000/shirtsnew', myInit).then(function(response) {
     //console.log(response.body);
     return response.json();
   }).then(function(text) {
-    console.log(text);
+    shirts = text;
+    //console.log(shirts);
+  });
+  mongoPants();
+}
+
+function mongoPants() {
+  var myHeaders = new fetch.Headers();
+
+  var myInit = { method: 'GET', headers: myHeaders, };
+
+  fetch('http://localhost:5000/pants', myInit).then(function(response) {
+    //console.log(response.body);
+    return response.json();
+  }).then(function(text) {
+    pants = text;
+    //console.log(pants);
+  });
+  mongoJackets();
+}
+
+function mongoJackets() {
+  var myHeaders = new fetch.Headers();
+
+  var myInit = { method: 'GET', headers: myHeaders, };
+
+  fetch('http://localhost:5000/jackets', myInit).then(function(response) {
+    //console.log(response.body);
+    return response.json();
+  }).then(function(text) {
+    jackets = text;
+    console.log(jackets);
+  });
+  mongoShoes();
+}
+
+function mongoShoes() {
+  var myHeaders = new fetch.Headers();
+
+  var myInit = { method: 'GET', headers: myHeaders, };
+
+  fetch('http://localhost:5000/shoes', myInit).then(function(response) {
+    //console.log(response.body);
+    return response.json();
+  }).then(function(text) {
+    shoes = text;
+    //console.log(shoes);
+    wardrobe.push(shirts);
+    wardrobe.push(pants);
+    wardrobe.push(jackets);
+    wardrobe.push(shoes);
+    //console.log(wardrobe);
   });
 }
 
 function goodShirts() {
-  if (input["type"] === "shirt") return [input];
+  if (input["type"] === "shirt"){
+      console.log([input][0]["type"]);
+      return [input];
+  } 
   shirtInput = false;
   ret = [];
   for (i = 0; i < shirts.length; i++) {
-    if (checker(shirts[i], input)) ret.append(shirts[i])
+    if (checker(shirts[i], input)) ret.push(shirts[i])
   }
+  console.log(ret);
   return ret;
 }
 
@@ -54,15 +123,16 @@ function allMatches() {
     else {
       for (k = 0; k < wardrobe[i].length; i++) {
         for (z = 0; z < inputAsList.length; z++) {
-          if (checker(inputAsList[z], wardrobe[i, k])) {
-            curr.append(wardrobe[i, k]);
+          if (checker(inputAsList[z], wardrobe[i][k])) {
+            curr.push(wardrobe[i, k]);
             break;
           }
         }
       }
     }
-    ret.append(curr);
+    ret.push(curr);
   }
+  console.log(ret);
   return ret;
 }
 
@@ -72,12 +142,14 @@ function checker(shirt, other) {
 }
 
 function occasionChecker(shirt, other) {
-  return shirt["occassion"] == other["occassion"];
+  return shirt["occassions"] == other["occassions"];
 }
 
 function colorChecker(shirt, other) {
   var index = 1 ? (["black", "white", "grey", "gray"].indexOf(shirt["color"]) != -1) :
   (2 ? ["yellow", "brown"].indexOf(shirt["color"]) : 3);
+
+  console.log(index);
 
   var dict = {1: [],
   2: ["red", "orange", "green", "blue", "violet", "pink", "purple"],
@@ -101,6 +173,6 @@ function fabricChecker(shirt, other) {
   'leather': ['cotton', 'leather', 'denim', 'nylon', 'polyster'],
   'nylon': ['cotton', 'denim', 'leather'],
   'polyster': ['cotton', 'denim', 'leather']};
-  return dict[shirt['fabrics']].indexOf(other["fabrics"]) == -1;
+  return dict[shirt['fabric']].indexOf(other["fabric"]) == -1;
 
 }
