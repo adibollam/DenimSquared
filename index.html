@@ -44,11 +44,11 @@ u<!DOCTYPE html>
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <p><h1 class="mt-5">Input Link To Clothing</h1><p>
+          <p><h1 id="tester" class="mt-5">Input Link To Clothing</h1><p>
           <form>
           WebLink:<br>
           <input id="weblink" type="text" value=""><br>
-          <input type="button" id="buttonID" value="submit"/>
+          <input type="button" id="buttonID" value="submit" onclick="getLink()"/>
         </form>
           </ul>
         </div>
@@ -60,6 +60,7 @@ u<!DOCTYPE html>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javaScript" src="scrape.js"></script>
+    <script type="text/javaScript" src="bs.js"></script>
     <script>
 
     $('#buttonID').click(function(){

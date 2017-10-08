@@ -1,3 +1,4 @@
+var link;
 function doShit(){
   var request = require('request'),
   	cheerio = require('cheerio'),
@@ -13,8 +14,8 @@ function doShit(){
   var fabrics = ["cotton", "denim", "leather", "nylon", "polyster"];
   var type = 0;
 
-  var link = $('#weblink').val();
-  
+  link = $('#weblink').val();
+
 
 
   request(link, function(err, resp, body){ //
