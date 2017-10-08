@@ -20,8 +20,13 @@ var inputAsList = goodShirts();
 
 var matches = allMatches();
 
-cp = Combinatorics.cartesianProduct(matches[0], matches[1], matches[2], matches[3]);
-console.log(cp.toArray());
+if (len(matches) == 4) {
+  cp = Combinatorics.cartesianProduct(matches[0], matches[1], matches[2], matches[3]);
+  cp = cp.toArray();
+}
+else {
+
+}
 
 
 readMongo();
