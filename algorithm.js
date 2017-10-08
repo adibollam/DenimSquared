@@ -105,7 +105,7 @@ function goodShirts() {
   if (input["type"] === "shirt"){
       console.log([input][0]["type"]);
       return [input];
-  } 
+  }
   shirtInput = false;
   ret = [];
   for (i = 0; i < shirts.length; i++) {
@@ -169,10 +169,10 @@ function styleChecker(shirt, other) {
 
 function fabricChecker(shirt, other) {
   var dict = { 'cotton': ['leather'],
-  'denim':['cotton', 'leather', 'denim', 'nylon', 'polyster'],
-  'leather': ['cotton', 'leather', 'denim', 'nylon', 'polyster'],
-  'nylon': ['cotton', 'denim', 'leather'],
-  'polyster': ['cotton', 'denim', 'leather']};
+  'denim':['leather', 'denim', 'nylon', 'polyster'],
+  'leather': ['leather', 'denim', 'nylon', 'polyster'],
+  'nylon': [ 'denim', 'leather'],
+  'polyster': [ 'denim', 'leather']};
   return dict[shirt['fabric']].indexOf(other["fabric"]) == -1;
 
 }
