@@ -46,7 +46,8 @@ pants = db.pants
 pantsOne = { "Color" : "Blue",
              "Collar" : "Round",
              "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
+             "Occasions" : "Casual",
+             "imageURI" : "localhost:8000/images/image.jpg" } 
 
 pantsTwo = { "Color" : "Blue",
              "Collar" : "Round",
