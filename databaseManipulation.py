@@ -97,40 +97,6 @@ print('Four pant: {0}'.format(resultFour.inserted_id))
 
 
 jacket = db.jacket
-jacketOne = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
-
-jacektTwo = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
-                         
-jacketThree = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
-
-jacketFour = { "Color" : "Blue",
-             "Collar" : "Round",
-             "Fabric" : "Cotton",
-             'Occasions' : "Casual" } 
-
-resultOne = jacket.insert_one(shirtOne)
-resultTwo = jacket.insert_one(shirtTwo)
-resultThree = jacket.insert_one(shirtThree) 
-resultFour = jacket.insert_one(shirtFour)
-print('One jacket: {0}'.format(resultOne.inserted_id))
-print('Two jacket: {0}'.format(resultTwo.inserted_id))
-print('Three jacket: {0}'.format(resultThree.inserted_id))
-print('Four jacket: {0}'.format(resultFour.inserted_id))
-
-
-#Code for shoes
-
-
-shoes = db.shoes
 pantOne = { "color" : "grey",
              "fabric" : "cotton",
              "occasions" : "tennis",
@@ -155,11 +121,55 @@ pantFour = { "color" : "blue",
              "style" : "pants",
              "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
 
+#code that puts the jacket documents into the jacket collection
 
-resultOne = shoes.insert_one(shirtOne)
-resultTwo = shoes.insert_one(shirtTwo)
-resultThree = shoes.insert_one(shirtThree) 
-resultFour = shoes.insert_one(shirtFour)
+resultOne = jacket.insert_one(shirtOne)
+resultTwo = jacket.insert_one(shirtTwo)
+resultThree = jacket.insert_one(shirtThree) 
+resultFour = jacket.insert_one(shirtFour)
+
+
+#test case used to test the code compiliation
+print('One jacket: {0}'.format(resultOne.inserted_id))
+print('Two jacket: {0}'.format(resultTwo.inserted_id))
+print('Three jacket: {0}'.format(resultThree.inserted_id))
+print('Four jacket: {0}'.format(resultFour.inserted_id))
+
+
+#Code for shoes
+shoes = db.shoes
+shoeOne = { "color" : "grey",
+             "fabric" : "cotton",
+             "occasions" : "tennis",
+             "style" :  "shoes",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvBlueShorts.jpg" } 
+
+shoeTwo = { "color" : "brown",
+             "fabric" : "cotton",
+             "occasions" : "flats",
+             "style" : "pants",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvKhakhis.jpg"} 
+                         
+shoeThree = { "color" : "pink",
+             "fabric" : "cotton",
+             "occasions" : "casual",
+             "style" : "shorts",
+             "imageuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvPinkShorts.jpg" } 
+
+shoeFour = { "color" : "blue",
+             "fabric" : "jeans",
+             "occasions" : "casual",
+             "style" : "pants",
+             "iamgeuri" : "https://github.com/shloak/DenimSquared/blob/master/Images/vvjeans.jpg" }
+
+
+#code used to put the documents for shoes into the shoe collection
+resultOne = shoes.insert_one(shoeOne)
+resultTwo = shoes.insert_one(shoeTwo)
+resultThree = shoes.insert_one(shoeThree) 
+resultFour = shoes.insert_one(shoeFour)
+
+
 print('One shoes: {0}'.format(resultOne.inserted_id))
 print('Two shoes: {0}'.format(resultTwo.inserted_id))
 print('Three shoes: {0}'.format(resultThree.inserted_id))
