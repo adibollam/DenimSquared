@@ -1,3 +1,6 @@
+var fetch = require('node-fetch');
+var request = require('request');
+
 var types = ["shirt", "jacket", "pants", "shoes"];
 var occassions = ["casual", "business", "summer", "winter", "sport"];
 var colors = ["black", "white", "grey", "gray", "red", "orange", "yellow", "green", "blue", "violet", "pink", "purple", "brown"];
@@ -6,34 +9,28 @@ var styles = [["button", "v-neck", "fullsleeve", "t-shirt"],
         ["jeans", "slacks", "shorts", "khaki", "sweatpant"],
         ["tennis", "flat", "skate", "fashion"]];
 var fabrics = ["cotton", "denim", "leather", "nylon", "polyster"];
-
-
 var input = {"type": 'shirt',
             "occassion": 'casual',
             "color": 'black',
             "style": 't-shirt',
             "fabrics": 'cotton'};
 
-var shirts = blob["shirt"];
-var jackets = blob["jacket"];
-var pants = blob["pants"];
-var shoes = blob["shoes"];
-
-var wardrobe = [shirts, jackets, pants, shoes];
-
 var shirtInput = true;
 //var inputAsList = goodShirts();
+
 //var matches = allMatches();
+
 
 readMongo();
 
 function readMongo() {
-  var myHeaders = new Headers();
+  var myHeaders = new fetch.Headers();
 
   var myInit = { method: 'GET', headers: myHeaders, };
 
-  fetch('http://localhost:8000/shirts', myInit).then(function(response) {
-    console.log(response.body);
+  fetch('http://localhost:5000/shirts', myInit).then(function(response) {
+    //console.log(response.body);
+    console.log(request)
   });
 }
 

@@ -27,8 +27,11 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
+    "express": "^4.16.1",
     "jquery": "^3.2.1",
-    "popper.js": "^1.11.1"
+    "node-fetch": "^1.7.3",
+    "popper.js": "^1.11.1",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
